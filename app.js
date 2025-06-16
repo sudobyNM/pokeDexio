@@ -74,7 +74,7 @@ function pokeGrid(pokemonData) {
                 </div>
 
                 <div class="div-img">
-                    <img class="poke-img"
+                    <img class="poke-img" 
                         src="${
                           poke.sprites.other["official-artwork"]
                             .front_default || poke.sprites.front_default
@@ -369,6 +369,26 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.style.display === "block") {
     modal.style.display = "none";
   }
+});
+
+// Back to Top Button functionality
+const backToTopButton = document.getElementById("backToTop");
+
+// Show button when user scrolls down 300px
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 300) {
+    backToTopButton.classList.add("visible");
+  } else {
+    backToTopButton.classList.remove("visible");
+  }
+});
+
+// Scroll to top when button is clicked
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
   
 

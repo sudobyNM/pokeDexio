@@ -468,6 +468,36 @@ input {
   font-size: 1.1rem;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #378cf4;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: none;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top:hover {
+  background-color: #60a4f6;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top.visible {
+  display: block;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 480px) {
