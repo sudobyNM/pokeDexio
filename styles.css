@@ -28,7 +28,6 @@
 body {
   background-color: var(--bg-color);
   line-height: 1.5;
-  transition: var(--transtition);
 }
 
 header {
@@ -282,7 +281,7 @@ input {
 .close-btn {
   position: absolute;
   right: 22px;
-  top: -5px;
+  top: 0.5px;
   font-size: 28px;
   cursor: pointer;
   color: var(--txt-color);
@@ -292,7 +291,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0rem 5rem 0rem 0.8rem;
+  margin: -1.2rem 5rem 0rem 0.77rem;
   align-items: center;
 }
 
@@ -316,7 +315,7 @@ input {
   margin-top: -0.5rem;
   margin-left: -0.5rem;
   width: 150px;
-  height: 150px;
+  height: 140px;
   flex: 40%;
   aspect-ratio: 1;
   object-fit: contain;
@@ -506,21 +505,26 @@ input {
     grid-template-rows: repeat(1, 1fr);
     gap: 2rem;
     justify-content: center;
-    transition: 0.3s ease;
-    
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo img {
+    width: 80px;
+    height: 40px;
+    margin-left: 0.5rem;
   }
 
   input {
-    width: 8rem;
+    width: 8.6rem;
     margin-left: 2.5rem;
-    padding: 0.4rem;
-    font-size: 0.78rem;
+    padding: 0.42rem;
+    font-size: 0.65rem;
   }
 
   .btn {
-    width: 3.1rem;
-    padding: 0.4rem;
-    font-size: 0.8rem;
+    width: 3rem;
+    padding: 0.42rem;
+    font-size: 0.65rem;
   }
 
   .poke-card {
@@ -553,14 +557,18 @@ input {
     padding: 0.1rem 0;
   }
 
+  .header-container {
+    margin: 0;
+  }
+
   .modal-header h2 {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     margin-left: 0.8rem;
   }
 
   .modal-img {
     width: 85px;
-    height: 90px;
+    height: 80px;
     margin-left: 0;
     margin-top: -1.5rem;
   }
@@ -589,20 +597,21 @@ input {
 
   .poke-category {
     margin-top: 0.9rem;
+    padding: 0.1rem;
     margin-left: 0rem;
-    padding-left: 0rem;
-    flex-direction: column;
+    display: grid !important;
+    grid-template-rows: 1fr;
+    max-width: 250px;
+    justify-items: center;
     gap: 0;
   }
 
   .poke-category h4 {
-    margin-left: -0.8rem;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
   }
 
   .evolution-chain {
-    margin-left: -1.3rem;
     margin-top: 0rem;
   }
 
@@ -613,8 +622,13 @@ input {
   .pokemon-status {
     position: absolute;
     right: 40px;
-    padding: 0;
+    padding: 0 0 0.1rem 0;
     bottom: 0;
+  }
+
+  .close-btn {
+    top: -5px;
+    right: 12px;
   }
 }
 
@@ -664,7 +678,7 @@ input {
 
   .modal-img {
     width: 85px;
-    height: 90px;
+    height: 80px;
     margin-left: 0;
     margin-top: -1.5rem;
   }
@@ -693,20 +707,25 @@ input {
 
   .poke-category {
     margin-top: 0.9rem;
-    margin-left: 0rem;
-    padding-left: 0rem;
-    flex-direction: column;
+    display: grid !important;
+    grid-template-rows: 1fr;
+    justify-items: center;
     gap: 0;
   }
 
+  .header-container {
+    margin: 0rem 0rem 0rem 0.5rem;
+    padding-top: 0.2rem;
+  }
+
   .poke-category h4 {
-    margin-left: -0.8rem;
-    font-size: 0.88rem;
+    margin-left: 0rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
   }
 
   .evolution-chain {
-    margin-left: -1.3rem;
+    margin-left: 0rem;
     margin-top: 0rem;
   }
 
@@ -720,6 +739,10 @@ input {
     right: 40px;
     padding: 0;
     bottom: 0;
+  }
+
+  .close-btn {
+    top: -5.5px;
   }
 
   @media (max-width: 570px) {
@@ -787,6 +810,18 @@ input {
   }
   .btn {
     width: 5rem;
+  }
+
+  .header-container {
+    margin: -1.2rem 2rem 0rem 0.85rem;
+    align-items: center;
+  }
+  .header-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .close-btn {
+    top: -3px;
   }
 }
 
