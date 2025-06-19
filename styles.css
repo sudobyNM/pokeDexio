@@ -499,7 +499,7 @@ input {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 480px) {
+@media (max-width: 360px) {
   .container {
     grid-template-columns: none;
     grid-template-rows: repeat(1, 1fr);
@@ -509,22 +509,166 @@ input {
   }
 
   .nav-logo img {
-    width: 80px;
+    display: none;
+  }
+
+  .searchBar {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 1.6rem;
+    max-width: 232px;
+  }
+
+  input {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0.3rem 0rem 0.3rem 0.8rem;
+    font-size: 0.7rem;
+  }
+  .btn {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0.3rem 0.9rem 0.3rem 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .toggle-mode {
+    margin-top: 0.65rem;
+  }
+
+  .dark-mode {
+    width: 20px;
+    height: 20px;
+  }
+
+  .poke-card {
+    min-height: 24rem;
+    width: 250px;
+    margin-inline: 1rem;
+    justify-content: center;
+  }
+
+  .poke-header {
+    margin-bottom: 2rem;
+    margin-top: -3rem;
+  }
+
+  .modal-content {
+    width: 90% !important;
+    max-width: 320px !important;
+    margin: 5rem auto !important;
+    padding: 0.1rem 0 !important;
+  }
+
+  .modal-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.1rem 0;
+    width: 280px !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+
+  .modal-img {
+    margin-left: 0;
+  }
+
+  .header-container {
+    margin: 0;
+    padding: 0.05rem 0 0 0;
+  }
+
+  .modal-header h2 {
+    font-size: 0.88rem;
+    margin-left: 0.8rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-container {
+    width: 280px !important;
+    padding: 0 0.5rem;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .poke-category {
+    margin: 0.5rem 0 0 0;
+    flex-direction: column;
+  }
+
+  .modal-stat {
+    width: 280px !important;
+    justify-content: space-between;
+    padding-right: 1.5rem;
+  }
+
+  .pokemon-status {
+    position: absolute;
+    right: 40px;
+    padding: 0 0 0.1rem 0;
+    bottom: 0;
+  }
+
+  .close-btn {
+    top: -3.5px;
+    right: 12px;
+    font-size: 23.5px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .container {
+    grid-template-columns: none;
+    grid-template-rows: repeat(1, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo img {
+    width: 72px;
     height: 40px;
+  }
+
+  .searchBar {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    width: 200px;
+    padding-left: 2rem;
     margin-left: 0.5rem;
   }
 
   input {
-    width: 8.6rem;
-    margin-left: 2.5rem;
-    padding: 0.42rem;
-    font-size: 0.65rem;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0.3rem 0rem 0.3rem 0.8rem;
+    font-size: 0.7rem;
   }
 
   .btn {
-    width: 3rem;
-    padding: 0.42rem;
-    font-size: 0.65rem;
+    box-sizing: border-box;
+    padding: 0.3rem 0.9rem 0.3rem 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .dark-mode {
+    width: 20px;
+    height: 20px;
   }
 
   .poke-card {
@@ -553,12 +697,15 @@ input {
   }
 
   .modal-content {
-    margin: 5rem auto;
-    padding: 0.1rem 0;
+    width: 90% !important;
+    max-width: 330px !important;
+    margin: 5rem auto !important;
+    padding: 0.1rem 0 !important;
   }
 
   .header-container {
     margin: 0;
+    padding: 0.05rem 0.5rem 0rem 0.5rem;
   }
 
   .modal-header h2 {
@@ -574,9 +721,11 @@ input {
   }
 
   .info-container {
-    padding-left: 0;
+    padding: 0 0.3rem;
     margin-top: 0;
     margin-left: 0;
+    width: 280px !important;
+    max-width: 280px !important;
   }
 
   .modal-stats {
@@ -617,6 +766,7 @@ input {
 
   .ability p {
     margin-left: 0;
+    font-size: 0.9rem;
   }
 
   .pokemon-status {
@@ -633,6 +783,23 @@ input {
 }
 
 @media (min-width: 481px) and (max-width: 654px) {
+  .nav-logo img {
+    width: 90px;
+  }
+
+  input {
+    width: 10rem;
+    font-size: 0.85rem;
+    margin-left: 2.5rem;
+    padding: 0.3rem 0rem 0.3rem 0.6rem;
+  }
+
+  .btn {
+    width: 3.8rem;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+  }
+
   .container {
     grid-template-columns: none;
     grid-template-rows: repeat(1, 1fr);
@@ -725,8 +892,7 @@ input {
   }
 
   .evolution-chain {
-    margin-left: 0rem;
-    margin-top: 0rem;
+    padding: 0 0.2rem;
   }
 
   .ability p {
@@ -743,41 +909,6 @@ input {
 
   .close-btn {
     top: -5.5px;
-  }
-
-  @media (max-width: 570px) {
-    .pokemon-status {
-      position: absolute;
-      right: 40px;
-      padding: 0;
-      bottom: 0;
-    }
-  }
-
-  .ability {
-    margin-top: 0.5rem;
-  }
-
-  .gen {
-    margin-left: -0.1rem;
-  }
-
-  .nav-logo img {
-    width: 80px;
-    height: 40px;
-  }
-
-  input {
-    width: 11rem;
-    margin-left: 2rem;
-    padding: 0.42rem;
-    font-size: 0.82rem;
-  }
-
-  .btn {
-    width: 4rem;
-    padding: 0.42rem;
-    font-size: 0.82rem;
   }
 }
 
@@ -894,5 +1025,9 @@ input {
   .container {
     grid-template-columns: repeat(3, 1fr);
     transition: all 0.3s ease;
+  }
+
+  input {
+    margin-left: 1.5rem;
   }
 }

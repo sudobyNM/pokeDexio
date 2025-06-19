@@ -77,7 +77,7 @@ function pokeGrid(pokemonData) {
                 </div>
 
                 <div class="div-img">
-                    <img class="poke-img" 
+                    <img class="poke-img" loading="lazy"
                         src="${
                           poke.sprites.other["official-artwork"]
                             .front_default || poke.sprites.front_default
@@ -128,7 +128,6 @@ async function getPokemon() {
     // Update the pokemons array with the detailed data
     pokemons = pokemonDetails;
 
-    // Generate the grid with the Pokemon data
     pokeGrid(pokemons);
   } catch (error) {
     console.error("Error fetching Pokemon:", error);
@@ -156,7 +155,6 @@ async function searchPokemon() {
     });
 
     if (filteredByType.length > 0) {
-      // If we found Pokemon by type, show them
       pokeGrid(filteredByType);
       return;
     }
@@ -192,7 +190,7 @@ pokemon.addEventListener("keypress", (e) => {
   }
 });
 
-// Add type filter event listener outside the search function
+// Add type filter event listener
 pokemonGrid.addEventListener("click", (e) => {
   if (e.target.classList.contains("type-label")) {
     e.stopImmediatePropagation();
@@ -217,7 +215,7 @@ pokemonGrid.addEventListener("click", (e) => {
 // Modal functionality
 pokemonGrid.addEventListener("click", modalFunction);
 
-// Add function to fetch Pokemon species data
+// fetch Pokemon species data
 async function getPokemonSpecies(pokemon) {
   try {
     const response = await fetch(
@@ -315,7 +313,9 @@ async function modalFunction(e) {
                             </div>
 
                             <div class="poke-category">
+                                <div>
                                 <h4>Evolution Chain:</h4>
+                                </div>
                                 ${pokeChain
                                   .map(({ chain }) => {
                                     const base = chain.species.name;

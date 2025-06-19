@@ -1,136 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <div class="nav-logo">
+  </head>
+  <body>
+    <header>
+      <div class="nav-logo">
         <a href="index.html"
           ><img src="./assets/inkpx-word-art.png" alt="logo"
         /></a>
-    </div>
-    <div class="searchBar">
+      </div>
+      <div class="searchBar">
         <input
           type="search"
           class="poke-search"
           placeholder="Search Pokemon by type or name..."
         />
-      <button type="submit" class="btn">Search</button>
-    </div>
+        <button type="submit" class="btn">Search</button>
+      </div>
 
       <div class="toggle-mode">
         <button class="dark">
           <img class="dark-mode" src="./assets/dark.png" alt="mode" />
         </button>
-    </div>
-  </header>
+      </div>
+    </header>
 
     <main>
       <a id="home" href="index.html">Home</a>
-      <div class="container">
-        <!-- <div class="poke-card">
-          <div class="poke-header">
-            <div class="poke-id">
-              <span class="poke-id-label">#001</span>
-            </div>
-            <div class="poke-type">
-              <span class="type-label">Grass</span>
-              <span class="type-label">Poison</span>
-            </div>
-          </div>
-
-          <div class="div-img">
-            <img class="poke-img"
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-              alt="Bulbasaur"
-            />
-          </div>
-          <div class="poke-name">
-            <h3>Bulbasaur</h3>
-          </div>
-          <div class="poke-desc">
-            <p>
-              Bulbasaur can be seen napping in bright sunlight. There is a seed
-              on its back. By soaking up the sun's rays, the seed grows
-              steadily.
-            </p>
-          </div>
-        </div>
-
-        <div class="poke-card">
-          <div class="poke-header">
-            <div class="poke-id">
-              <span class="poke-id-label">#001</span>
-            </div>
-            <div class="poke-type">
-              <span class="type-label">Grass</span>
-              <span class="type-label">Poison</span>
-            </div>
-          </div>
-
-          <div>
-            <img class="poke-img"
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-              alt="Bulbasaur"
-            />
-          </div>
-          <div class="poke-name">
-            <h3>Bulbasaur</h3>
-          </div>
-          <div class="poke-desc">
-            <p>
-              Bulbasaur can be seen napping in bright sunlight. There is a seed
-              on its back. By soaking up the sun's rays, the seed grows
-              steadily.
-            </p>
-          </div>
-        </div> -->
-      </div>
+      <div class="container"></div>
     </main>
 
-   
-
-    <div class="modal" id="pokemonModal">
-      <!-- <div class="modal-body">
-        <div class="flex">
-          <div>
-            <img src="${ pokemon.sprites.other["official-artwork"].front_default
-            || pokemon.sprites.front_default }" alt="${pokemon.name}"
-            class="modal-img" />
-          </div>
-
-          <div class="modal-types">
-            ${pokemon.types .map( (type) => `<span
-              class="type-label"
-              style="background-color: ${typeColors[type.type.name]}"
-              >${type.type.name}</span
-            >` ) .join("")}
-          </div>
-        </div>
-
-        <div class="modal-stats">
-          ${pokemon.stats .map( (stat) => `
-          <div class="stat">
-            <span class="stat-name">${stat.stat.name}:</span>
-            <span class="stat-value">${stat.base_stat}</span>
-          </div>
-          ` ) .join("")}
-        </div>
-      </div> -->
-    </div>
+    <div class="modal" id="pokemonModal"></div>
 
     <button id="backToTop" class="back-to-top" title="Back to Top">↑</button>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
