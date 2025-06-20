@@ -557,7 +557,7 @@ input {
   .modal-content {
     width: 90% !important;
     max-width: 320px !important;
-    margin: 5rem auto !important;
+    margin: 5rem auto 6rem auto !important;
     padding: 0.1rem 0 !important;
   }
 
