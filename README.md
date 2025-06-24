@@ -3,6 +3,7 @@
 A modern, responsive Pokédex web application built with vanilla JavaScript, HTML, and CSS. Browse, search, and filter Pokémon, view detailed stats and evolution chains, and enjoy a smooth user experience with dark mode and loading animations.
 
 # Preview
+
 ![preview](./assets/poke.png)
 
 # Features
