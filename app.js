@@ -4,6 +4,7 @@ const pokemonGrid = document.querySelector(".container");
 const modal = document.getElementById("pokemonModal");
 const closeBtn = document.querySelector(".close-btn");
 const darkBtn = document.querySelector(".dark");
+const loader = document.querySelector(".loader");
 const html = document.documentElement;
 
 let theme = localStorage.getItem("data-theme");
@@ -113,6 +114,8 @@ function pokeGrid(pokemonData) {
 // Fetch Pokemon data from API
 async function getPokemon() {
   try {
+    loader.classList.remove("hidden");
+
     const response = await fetch(
       "https://pokeapi.co/api/v2/pokemon?limit=1025"
     );
@@ -133,6 +136,8 @@ async function getPokemon() {
     console.error("Error fetching Pokemon:", error);
     pokemonGrid.innerHTML =
       '<p class="error">Error loading Pokemon. Please try again later.</p>';
+  } finally {
+    loader.classList.add("hidden");
   }
 }
 

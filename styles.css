@@ -45,6 +45,28 @@ header {
   gap: 1rem;
 }
 
+.loader {
+  position: fixed; /* Cover the whole screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader img {
+  object-fit: contain;
+  max-width: 80vw;
+  max-height: 80vh;
+  display: block;
+}
+
+.loader.hidden {
+  display: none;
+}
+
 main {
   margin-top: 7rem;
 }
@@ -206,6 +228,11 @@ input {
   margin: 0 0.3rem;
   font-weight: 500;
   letter-spacing: 0.2px;
+}
+
+.type-label:hover {
+  box-shadow: rgba(255, 255, 255, 0.985) 0px 0px 0px 0.6px inset,
+    rgba(38, 38, 38, 0.9) 0px 0px 0px 1px;
 }
 
 .poke-img {
