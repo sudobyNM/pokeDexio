@@ -510,7 +510,7 @@ input {
   text-align: center;
   line-height: 40px;
   transition: all 0.3s ease;
-  z-index: 1000;
+  z-index: 99;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
