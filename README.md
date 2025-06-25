@@ -28,6 +28,3 @@ A modern, responsive Pokédex web application built with vanilla JavaScript, HTM
 
 PokeAPI for Pokémon data
 
-# License
-
-This project is open-source and available under the MIT License.
